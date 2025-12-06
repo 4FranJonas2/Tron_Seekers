@@ -3,7 +3,7 @@
 #include "raylib.h"
 #include "raymath.h"
 
-namespace aracnoids
+namespace finalX
 {
 	enum class SceneStatus
 	{
@@ -23,8 +23,5 @@ namespace aracnoids
 		SceneStatus gameStatus = SceneStatus::GAMEMENU;
 
 		int fontSize = 25;
-
-		bool isResetMatch = false;
-		bool goMenu = false;
 	};
 }
