@@ -1,6 +1,6 @@
 #include "player.h"
 
-namespace finalX
+namespace tron_seekers
 {
 	
 }

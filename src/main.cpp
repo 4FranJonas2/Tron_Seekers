@@ -2,6 +2,6 @@
 
 int main()
 {
-	finalX::game_run();
+	tron_seekers::game_run();
 	return 0;
 }

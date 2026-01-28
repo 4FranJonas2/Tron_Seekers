@@ -3,7 +3,7 @@
 #include "raylib.h"
 #include "raymath.h"
 
-namespace finalX
+namespace tron_seekers
 {
 	enum class SceneStatus
 	{

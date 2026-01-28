@@ -1,6 +1,6 @@
 #pragma once
 
-namespace finalX
+namespace tron_seekers
 {
 	void game_run();
 }

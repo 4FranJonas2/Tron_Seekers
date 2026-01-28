@@ -34,6 +34,7 @@
     <ProjectGuid>{c88d4d4f-d3de-41a7-ad92-4a3809b1fcbc}</ProjectGuid>
     <RootNamespace>FinalX</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>TronSeekers</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

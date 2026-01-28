@@ -6,7 +6,7 @@
 
 #include "entities/player.h"
 
-namespace finalX
+namespace tron_seekers
 {
 	GameStats gameStatus;
 
@@ -34,7 +34,7 @@ namespace finalX
 		const int screenWidth = 1024;
 		const int screenHeight = 768;
 
-		InitWindow(screenWidth, screenHeight, "finalX");
+		InitWindow(screenWidth, screenHeight, "Tron Seekers");
 		InitAudioDevice();
 	}
 	void Input()
