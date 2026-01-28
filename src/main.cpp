@@ -2,6 +2,6 @@
 
 int main()
 {
-	tron_seekers::game_run();
+	tron_seekers::GameRun();
 	return 0;
 }

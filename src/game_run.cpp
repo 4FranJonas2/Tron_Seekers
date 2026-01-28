@@ -8,14 +8,14 @@
 
 namespace tron_seekers
 {
-	GameStats gameStatus;
+	GameStats game_status;
 
 	static void Init();
 	static void Input();
 	static void Update();
 	static void Draw();
 
-	void game_run()
+	void GameRun()
 	{
 		Init();
 		
@@ -33,8 +33,7 @@ namespace tron_seekers
 	{
 		const int screenWidth = 1024;
 		const int screenHeight = 768;
-
-		InitWindow(screenWidth, screenHeight, "Tron Seekers");
+		InitWindow(game_status.kScreenWidth, game_status.kScreenHeight, "Tron Seekers");
 		InitAudioDevice();
 	}
 	void Input()

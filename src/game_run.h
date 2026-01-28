@@ -2,5 +2,5 @@
 
 namespace tron_seekers
 {
-	void game_run();
+	void GameRun();
 }
