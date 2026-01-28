@@ -9,6 +9,7 @@
 namespace tron_seekers
 {
 	GameStats game_status;
+	Player player;
 
 	static void Init();
 	static void Input();
@@ -33,6 +34,8 @@ namespace tron_seekers
 	{
 		InitWindow(game_status.kScreenWidth, game_status.kScreenHeight, "Tron Seekers");
 		InitAudioDevice();
+		InitPlayer(player);
+
 	}
 	void Input()
 	{
@@ -42,5 +45,11 @@ namespace tron_seekers
 	}
 	void Draw()
 	{
+		BeginDrawing();
+		ClearBackground(BLACK);
+
+		DrawPlayer(player);
+
+		EndDrawing();
 	}
 }
