@@ -10,4 +10,7 @@ namespace tron_seekers
 		Vector2 player_pos;
 		
 	};
+
+	void InitPlayer(Player& player);
+	void DrawPlayer(Player player);
 }
