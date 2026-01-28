@@ -31,8 +31,6 @@ namespace tron_seekers
 
 	static void Init()
 	{
-		const int screenWidth = 1024;
-		const int screenHeight = 768;
 		InitWindow(game_status.kScreenWidth, game_status.kScreenHeight, "Tron Seekers");
 		InitAudioDevice();
 	}

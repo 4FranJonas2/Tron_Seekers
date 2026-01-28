@@ -23,5 +23,8 @@ namespace tron_seekers
 		SceneStatus gameStatus = SceneStatus::GAMEMENU;
 
 		int fontSize = 25;
+		const int kScreenWidth = 1024;
+		const int kScreenHeight = 768;
 	};
+
 }
