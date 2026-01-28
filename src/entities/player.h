@@ -2,11 +2,12 @@
 
 #include "../utilities.h"
 
-namespace finalX
+namespace tron_seekers
 {
-	struct Rectangle
+	struct Player
 	{
-		Vector2 pos;
-		float rad;
+		Rectangle player_hit_box;
+		Vector2 player_pos;
+		
 	};
 }
