@@ -5,13 +5,17 @@ namespace tron_seekers
 {
 	GameStats aux_game_stats;
 
+	float player_width = 20.0f;
+	float player_height = 60.0f;
+
+	float inmerse_timer = 0.0f;
+	float inmerse_delay = 2.5f;
+
 	static void ChangePLayerDir(Player& player);
+	static void InmerseSecuence(Player& player);
 
 	void InitPlayer(Player& player)
 	{
-		float player_width = 20.0f;
-		float player_height = 60.0f;
-
 		player.player_pos.x = aux_game_stats.kScreenWidth * 0.5f;
 		player.player_pos.y = aux_game_stats.kScreenHeight * 0.5f;
 
@@ -30,8 +34,14 @@ namespace tron_seekers
 
 	void UpdatePlayer(Player& player)
 	{
+		inmerse_timer += GetFrameTime();
+
 		switch (player.player_direction)
 		{
+		case EntitieMovemment::NONE:
+			player.player_hit_box = player.player_hit_box;
+			break;
+
 		case EntitieMovemment::UP:
 			player.player_hit_box.y -= player.player_speed * GetFrameTime();
 			break;
@@ -48,8 +58,17 @@ namespace tron_seekers
 			player.player_hit_box.x -= player.player_speed * GetFrameTime();
 			break;
 
-		case EntitieMovemment::NONE:
-			player.player_hit_box = player.player_hit_box;
+		case EntitieMovemment::INMERSE:
+			InmerseSecuence(player);
+
+			if (inmerse_timer >= inmerse_delay)
+			{
+				player.player_hit_box.width = player_width;
+				player.player_hit_box.height = player_height;
+
+				inmerse_timer = 0;
+				player.player_direction = EntitieMovemment::NONE;
+			}
 			break;
 
 		default:
@@ -78,7 +97,8 @@ namespace tron_seekers
 			{KEY_W, EntitieMovemment::UP},
 			{KEY_D, EntitieMovemment::RIGTH},
 			{KEY_S, EntitieMovemment::DOWN},
-			{KEY_A, EntitieMovemment::LEFT}
+			{KEY_A, EntitieMovemment::LEFT},
+			{KEY_SPACE, EntitieMovemment::INMERSE}
 		};
 
 		for (const KeyDir& input : inputs)
@@ -88,10 +108,19 @@ namespace tron_seekers
 				player.player_direction = input.dir;
 				break;
 			}
-			if (!IsKeyDown(input.key))	
+			else if (!IsKeyDown(input.key) && player.player_direction != EntitieMovemment::INMERSE)
 			{
 				player.player_direction = EntitieMovemment::NONE;
 			}
 		}
+	}
+
+	static void InmerseSecuence(Player& player)
+	{
+		float aux_inmerse_width = 15.0f;
+		float aux_inmerse_heiht = 45.0f;
+
+		player.player_hit_box.width = aux_inmerse_width;
+		player.player_hit_box.height = aux_inmerse_heiht;
 	}
 }
