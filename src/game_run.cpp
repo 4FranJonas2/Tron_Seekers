@@ -39,9 +39,11 @@ namespace tron_seekers
 	}
 	void Input()
 	{
+		InputPlayer(player);
 	}
 	void Update()
 	{
+		UpdatePlayer(player);
 	}
 	void Draw()
 	{
