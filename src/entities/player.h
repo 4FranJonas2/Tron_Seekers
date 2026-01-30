@@ -4,8 +4,6 @@
 
 namespace tron_seekers
 {
-
-
 	struct Player
 	{
 		Rectangle player_hit_box;
