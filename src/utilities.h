@@ -33,6 +33,7 @@ namespace tron_seekers
 		UP,
 		RIGTH,
 		DOWN,
-		LEFT
+		LEFT,
+		INMERSE
 	};
 }
