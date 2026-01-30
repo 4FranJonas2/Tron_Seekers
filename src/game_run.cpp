@@ -35,7 +35,6 @@ namespace tron_seekers
 		InitWindow(game_status.kScreenWidth, game_status.kScreenHeight, "Tron Seekers");
 		InitAudioDevice();
 		InitPlayer(player);
-
 	}
 	void Input()
 	{
@@ -49,6 +48,10 @@ namespace tron_seekers
 	{
 		BeginDrawing();
 		ClearBackground(BLACK);
+
+		//poner el texto de la version en una funcion en otro archivo mas tarde
+		// y generar locales para las variables magicas 
+		DrawText("v 0.1", game_status.kScreenWidth - 40, game_status.kScreenHeight - 20, 15, WHITE);
 
 		DrawPlayer(player);
 
