@@ -27,4 +27,12 @@ namespace tron_seekers
 		const int kScreenHeight = 768;
 	};
 
+	enum class EntitieMovemment
+	{
+		NONE =1,
+		UP,
+		RIGTH,
+		DOWN,
+		LEFT
+	};
 }
