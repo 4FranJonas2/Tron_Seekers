@@ -2,6 +2,8 @@
 
 #include "raylib.h"
 #include "raymath.h"
+#include <iostream>
+
 
 namespace tron_seekers
 {

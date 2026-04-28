@@ -11,6 +11,8 @@ namespace tron_seekers
 
 		float player_speed;
 
+		bool jump_secuence;
+
 		EntitieMovemment player_direction;
 	};
 
