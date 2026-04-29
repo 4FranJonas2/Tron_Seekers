@@ -32,10 +32,6 @@ namespace tron_seekers
 	enum class EntitieMovemment
 	{
 		NONE =1,
-		UP,
-		RIGTH,
-		DOWN,
-		LEFT,
 		INMERSE
 	};
 }

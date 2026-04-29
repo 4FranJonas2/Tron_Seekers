@@ -32,7 +32,7 @@ namespace tron_seekers
 
 	static void Init()
 	{
-		InitWindow(game_status.kScreenWidth, game_status.kScreenHeight, "Tron Seekers v0.1");
+		InitWindow(game_status.kScreenWidth, game_status.kScreenHeight, "Tron Seekers v0.1.1");
 		InitAudioDevice();
 		InitPlayer(player);
 	}
